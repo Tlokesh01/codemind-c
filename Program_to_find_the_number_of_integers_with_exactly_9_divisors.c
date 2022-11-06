@@ -3,11 +3,10 @@ using namespace std;
 
 bool F(int n){
     int c = 0;
-    int i = 1;
     for(int i = 1; i*i <= n; i++){
         if(n%i == 0){
             c+=2;
-            if(n/i == i)c--;
+            if(i == n/i)c--;
         }
     }
     return c==9;
@@ -23,5 +22,5 @@ int main(){
             ans++;
         }
     }
-    cout <<endl<< "Total="<<ans;
+    cout << endl << "Total=" << ans;
 }
